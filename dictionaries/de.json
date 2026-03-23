@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "status": "Status",
+    "booking": "Buchen",
+    "admin": "Admin"
+  },
+  "home": {
+    "title": "Willkommen bei Parkmanager",
+    "subtitle": "Reservieren Sie Ihren Parkplatz sofort"
+  },
+  "booking": {
+    "title": "Parkplatz Buchen",
+    "selectUser": "Benutzer auswählen",
+    "selectDate": "Datum auswählen",
+    "selectLot": "Parkplatz auswählen",
+    "submit": "Jetzt Buchen",
+    "success": "Buchung bestätigt!",
+    "errorFairness": "Buchung abgelehnt: Fairness-Limit überschritten"
+  },
+  "admin": {
+    "title": "Verwaltung",
+    "users": "Benutzer verwalten",
+    "lots": "Parkplätze verwalten",
+    "settings": "Einstellungen"
+  },
+  "status": {
+    "title": "Aktuelle Buchungen",
+    "today": "Heute",
+    "nextDay": "Nächster Werktag",
+    "followingDay": "Folgender Werktag",
+    "cancelBooking": "Buchung stornieren",
+    "embedInfo": "Betten Sie diese Seite als Iframe ein:"
+  }
+}

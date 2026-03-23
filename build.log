@@ -1,0 +1,368 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.35kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20-slim
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 183B done
+#3 DONE 0.0s
+
+#4 [base 1/1] FROM docker.io/library/node:20-slim@sha256:17281e8d1dc4d671976c6b89a12f47a44c2f390b63a989e2e327631041f544fd
+#4 resolve docker.io/library/node:20-slim@sha256:17281e8d1dc4d671976c6b89a12f47a44c2f390b63a989e2e327631041f544fd 0.0s done
+#4 CACHED
+
+#5 [runner  1/12] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 1.90kB done
+#6 DONE 0.0s
+
+#7 [runner  2/12] RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+#7 0.554 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 0.586 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#7 0.601 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 0.700 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#7 1.707 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#7 1.716 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [294 kB]
+#7 2.623 Fetched 9347 kB in 2s (4426 kB/s)
+#7 2.623 Reading package lists...
+#7 3.198 Reading package lists...
+#7 3.776 Building dependency tree...
+#7 3.926 Reading state information...
+#7 4.108 The following additional packages will be installed:
+#7 4.108   libssl3
+#7 4.170 The following NEW packages will be installed:
+#7 4.171   ca-certificates libssl3 openssl
+#7 4.234 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+#7 4.234 Need to get 3617 kB of archives.
+#7 4.234 After this operation, 8928 kB of additional disk space will be used.
+#7 4.234 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+#7 4.413 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+#7 4.497 Get:3 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+#7 4.653 debconf: delaying package configuration, since apt-utils is not installed
+#7 4.701 Fetched 3617 kB in 0s (11.6 MB/s)
+#7 4.730 Selecting previously unselected package libssl3:amd64.
+#7 4.730 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6096 files and directories currently installed.)
+#7 4.742 Preparing to unpack .../libssl3_3.0.18-1~deb12u2_amd64.deb ...
+#7 4.751 Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+#7 4.947 Selecting previously unselected package openssl.
+#7 4.948 Preparing to unpack .../openssl_3.0.18-1~deb12u2_amd64.deb ...
+#7 4.954 Unpacking openssl (3.0.18-1~deb12u2) ...
+#7 5.113 Selecting previously unselected package ca-certificates.
+#7 5.115 Preparing to unpack .../ca-certificates_20230311+deb12u1_all.deb ...
+#7 5.119 Unpacking ca-certificates (20230311+deb12u1) ...
+#7 5.235 Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+#7 5.246 Setting up openssl (3.0.18-1~deb12u2) ...
+#7 5.262 Setting up ca-certificates (20230311+deb12u1) ...
+#7 5.362 debconf: unable to initialize frontend: Dialog
+#7 5.362 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 5.362 debconf: falling back to frontend: Readline
+#7 5.362 debconf: unable to initialize frontend: Readline
+#7 5.362 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#7 5.362 debconf: falling back to frontend: Teletype
+#7 7.842 Updating certificates in /etc/ssl/certs...
+#7 8.826 142 added, 0 removed; done.
+#7 8.861 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#7 8.884 Processing triggers for ca-certificates (20230311+deb12u1) ...
+#7 8.894 Updating certificates in /etc/ssl/certs...
+#7 ...
+
+#8 [deps 1/4] RUN apt-get update && apt-get install -y openssl libssl-dev ca-certificates && rm -rf /var/lib/apt/lists/*
+#8 0.553 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#8 0.585 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#8 0.603 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#8 0.699 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#8 1.674 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#8 1.675 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [294 kB]
+#8 2.563 Fetched 9347 kB in 2s (4555 kB/s)
+#8 2.563 Reading package lists...
+#8 3.156 Reading package lists...
+#8 3.719 Building dependency tree...
+#8 3.865 Reading state information...
+#8 4.037 The following additional packages will be installed:
+#8 4.037   libssl3
+#8 4.038 Suggested packages:
+#8 4.038   libssl-doc
+#8 4.075 The following NEW packages will be installed:
+#8 4.076   ca-certificates libssl-dev libssl3 openssl
+#8 4.122 0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+#8 4.122 Need to get 6061 kB of archives.
+#8 4.122 After this operation, 21.6 MB of additional disk space will be used.
+#8 4.122 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+#8 4.297 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+#8 4.404 Get:3 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+#8 4.408 Get:4 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl-dev amd64 3.0.18-1~deb12u2 [2444 kB]
+#8 4.662 debconf: delaying package configuration, since apt-utils is not installed
+#8 4.711 Fetched 6061 kB in 0s (14.2 MB/s)
+#8 4.744 Selecting previously unselected package libssl3:amd64.
+#8 4.744 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6096 files and directories currently installed.)
+#8 4.753 Preparing to unpack .../libssl3_3.0.18-1~deb12u2_amd64.deb ...
+#8 4.761 Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+#8 4.956 Selecting previously unselected package openssl.
+#8 4.958 Preparing to unpack .../openssl_3.0.18-1~deb12u2_amd64.deb ...
+#8 4.962 Unpacking openssl (3.0.18-1~deb12u2) ...
+#8 5.114 Selecting previously unselected package ca-certificates.
+#8 5.116 Preparing to unpack .../ca-certificates_20230311+deb12u1_all.deb ...
+#8 5.121 Unpacking ca-certificates (20230311+deb12u1) ...
+#8 5.230 Selecting previously unselected package libssl-dev:amd64.
+#8 5.232 Preparing to unpack .../libssl-dev_3.0.18-1~deb12u2_amd64.deb ...
+#8 5.236 Unpacking libssl-dev:amd64 (3.0.18-1~deb12u2) ...
+#8 5.459 Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+#8 5.469 Setting up libssl-dev:amd64 (3.0.18-1~deb12u2) ...
+#8 5.479 Setting up openssl (3.0.18-1~deb12u2) ...
+#8 5.495 Setting up ca-certificates (20230311+deb12u1) ...
+#8 6.130 debconf: unable to initialize frontend: Dialog
+#8 6.130 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#8 6.134 debconf: falling back to frontend: Readline
+#8 6.134 debconf: unable to initialize frontend: Readline
+#8 6.134 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#8 6.134 debconf: falling back to frontend: Teletype
+#8 8.039 Updating certificates in /etc/ssl/certs...
+#8 9.061 142 added, 0 removed; done.
+#8 9.100 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#8 9.124 Processing triggers for ca-certificates (20230311+deb12u1) ...
+#8 9.133 Updating certificates in /etc/ssl/certs...
+#8 ...
+
+#9 [builder 1/6] RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+#9 0.554 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#9 0.590 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#9 0.605 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#9 0.706 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#9 1.702 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#9 1.702 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [294 kB]
+#9 2.588 Fetched 9347 kB in 2s (4499 kB/s)
+#9 2.588 Reading package lists...
+#9 3.173 Reading package lists...
+#9 3.732 Building dependency tree...
+#9 3.877 Reading state information...
+#9 4.019 The following additional packages will be installed:
+#9 4.020   libssl3
+#9 4.060 The following NEW packages will be installed:
+#9 4.062   ca-certificates libssl3 openssl
+#9 4.101 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+#9 4.101 Need to get 3617 kB of archives.
+#9 4.101 After this operation, 8928 kB of additional disk space will be used.
+#9 4.101 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+#9 4.252 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+#9 4.366 Get:3 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+#9 4.581 debconf: delaying package configuration, since apt-utils is not installed
+#9 4.616 Fetched 3617 kB in 0s (11.9 MB/s)
+#9 4.654 Selecting previously unselected package libssl3:amd64.
+#9 4.654 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6096 files and directories currently installed.)
+#9 4.683 Preparing to unpack .../libssl3_3.0.18-1~deb12u2_amd64.deb ...
+#9 4.697 Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+#9 4.876 Selecting previously unselected package openssl.
+#9 4.878 Preparing to unpack .../openssl_3.0.18-1~deb12u2_amd64.deb ...
+#9 4.881 Unpacking openssl (3.0.18-1~deb12u2) ...
+#9 5.025 Selecting previously unselected package ca-certificates.
+#9 5.027 Preparing to unpack .../ca-certificates_20230311+deb12u1_all.deb ...
+#9 5.031 Unpacking ca-certificates (20230311+deb12u1) ...
+#9 5.146 Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+#9 5.166 Setting up openssl (3.0.18-1~deb12u2) ...
+#9 5.183 Setting up ca-certificates (20230311+deb12u1) ...
+#9 5.292 debconf: unable to initialize frontend: Dialog
+#9 5.292 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#9 5.292 debconf: falling back to frontend: Readline
+#9 5.293 debconf: unable to initialize frontend: Readline
+#9 5.293 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#9 5.293 debconf: falling back to frontend: Teletype
+#9 7.774 Updating certificates in /etc/ssl/certs...
+#9 8.757 142 added, 0 removed; done.
+#9 8.792 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#9 8.839 Processing triggers for ca-certificates (20230311+deb12u1) ...
+#9 8.851 Updating certificates in /etc/ssl/certs...
+#9 9.719 0 added, 0 removed; done.
+#9 9.719 Running hooks in /etc/ca-certificates/update.d...
+#9 9.723 done.
+#9 DONE 9.8s
+
+#7 [runner  2/12] RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+#7 9.765 0 added, 0 removed; done.
+#7 9.765 Running hooks in /etc/ca-certificates/update.d...
+#7 9.768 done.
+#7 DONE 9.9s
+
+#10 [builder 2/6] WORKDIR /app
+#10 DONE 0.0s
+
+#8 [deps 1/4] RUN apt-get update && apt-get install -y openssl libssl-dev ca-certificates && rm -rf /var/lib/apt/lists/*
+#8 10.01 0 added, 0 removed; done.
+#8 10.01 Running hooks in /etc/ca-certificates/update.d...
+#8 10.01 done.
+#8 DONE 10.1s
+
+#11 [deps 2/4] WORKDIR /app
+#11 DONE 0.1s
+
+#12 [runner  3/12] RUN addgroup --system --gid 1001 nodejs
+#12 ...
+
+#13 [deps 3/4] COPY package.json package-lock.json* ./
+#13 DONE 0.1s
+
+#12 [runner  3/12] RUN addgroup --system --gid 1001 nodejs
+#12 0.575 Adding group `nodejs' (GID 1001) ...
+#12 0.599 Done.
+#12 DONE 0.6s
+
+#14 [runner  4/12] RUN adduser --system --uid 1001 nextjs
+#14 0.414 Adding system user `nextjs' (UID 1001) ...
+#14 0.414 Adding new user `nextjs' (UID 1001) with group `nogroup' ...
+#14 0.430 useradd warning: nextjs's uid 1001 is greater than SYS_UID_MAX 999
+#14 0.449 Not creating `/nonexistent'.
+#14 DONE 0.5s
+
+#15 [deps 4/4] RUN npm config set maxsockets 50 &&     npm config set fetch-retries 3 &&     npm config set fetch-retry-mintimeout 10000 &&     npm config set fetch-retry-maxtimeout 60000 &&     npm install --no-audit --no-fund --network-timeout=60000 --ignore-scripts
+#15 17.41 
+#15 17.41 added 351 packages in 16s
+#15 DONE 18.2s
+
+#16 [builder 3/6] COPY --from=deps /app/node_modules ./node_modules
+#16 DONE 5.9s
+
+#17 [builder 4/6] COPY . .
+#17 DONE 0.3s
+
+#18 [builder 5/6] RUN npx prisma generate
+#18 3.692 Prisma schema loaded from prisma/schema.prisma
+#18 4.629 
+#18 4.629 Ô£ö Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 125ms
+#18 4.629 
+#18 4.629 Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+#18 4.629 
+#18 4.629 Tip: Want to react to database changes in your app as they happen? Discover how with Pulse: https://pris.ly/tip-1-pulse
+#18 4.629 
+#18 4.840 npm notice
+#18 4.840 npm notice New major version of npm available! 10.8.2 -> 11.12.0
+#18 4.840 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.0
+#18 4.840 npm notice To update run: npm install -g npm@11.12.0
+#18 4.840 npm notice
+#18 DONE 4.9s
+
+#19 [builder 6/6] RUN npm run build
+#19 0.530 
+#19 0.530 > parkmanager@1.0.0 build
+#19 0.530 > next build
+#19 0.530 
+#19 1.007 Ôû▓ Next.js 16.2.1 (Turbopack)
+#19 1.007 
+#19 1.032   Creating an optimized production build ...
+#19 3.879 
+#19 3.879 > Build error occurred
+#19 3.882 Error: Turbopack build failed with 1 errors:
+#19 3.882 ./proxy.ts
+#19 3.882 Proxy is missing expected function export name
+#19 3.882 This function is what Next.js runs for every request handled by this proxy (previously called middleware).
+#19 3.882 
+#19 3.882 Why this happens:
+#19 3.882 - You are migrating from `middleware` to `proxy`, but haven't updated the exported function.
+#19 3.882 - The file exists but doesn't export a function.
+#19 3.882 - The export is not a function (e.g., an object or constant).
+#19 3.882 - There's a syntax error preventing the export from being recognized.
+#19 3.882 
+#19 3.882 To fix it:
+#19 3.882 - Ensure this file has either a default or "proxy" function export.
+#19 3.882 
+#19 3.882 Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+#19 3.882 
+#19 3.882 
+#19 3.882     at ignore-listed frames
+#19 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+------
+ > [builder 6/6] RUN npm run build:
+3.882 - The export is not a function (e.g., an object or constant).
+3.882 - There's a syntax error preventing the export from being recognized.
+3.882 
+3.882 To fix it:
+3.882 - Ensure this file has either a default or "proxy" function export.
+3.882 
+3.882 Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+3.882 
+3.882 
+3.882     at ignore-listed frames
+------
+
+ 5 warnings found (use docker --debug to expand):
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 70)
+ - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 73)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 34)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 42)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 43)
+Dockerfile:36
+--------------------
+  34 |     ENV NEXT_TELEMETRY_DISABLED 1
+  35 |     
+  36 | >>> RUN npm run build
+  37 |     
+  38 |     # Production image, copy all the files and run next
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1

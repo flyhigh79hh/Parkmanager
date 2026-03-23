@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "status": "Status",
+    "booking": "Booking",
+    "admin": "Admin"
+  },
+  "home": {
+    "title": "Welcome to Parkmanager",
+    "subtitle": "Reserve your parking spot instantly"
+  },
+  "booking": {
+    "title": "Book a Spot",
+    "selectUser": "Select User",
+    "selectDate": "Select Date",
+    "selectLot": "Select Parking Lot",
+    "submit": "Book Now",
+    "success": "Booking confirmed!",
+    "errorFairness": "Booking rejected: Fairness limit exceeded"
+  },
+  "admin": {
+    "title": "Administration",
+    "users": "Manage Users",
+    "lots": "Manage Lots",
+    "settings": "Settings"
+  },
+  "status": {
+    "title": "Current Bookings",
+    "today": "Today",
+    "nextDay": "Next Business Day",
+    "followingDay": "Following Business Day",
+    "cancelBooking": "Cancel booking",
+    "embedInfo": "Embed this page using an iframe:"
+  }
+}

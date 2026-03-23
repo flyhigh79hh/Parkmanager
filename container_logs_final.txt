@@ -1,0 +1,441 @@
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: Generator "/app/node_modules/@prisma/client/generator-build/index.js" failed:
+parkmanager-web-1  | 
+parkmanager-web-1  | node:internal/modules/cjs/loader:1210
+parkmanager-web-1  |   throw err;
+parkmanager-web-1  |   ^
+parkmanager-web-1  | Error: Cannot find module '/app/node_modules/@prisma/client/generator-build/index.js'
+parkmanager-web-1  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+parkmanager-web-1  |     at Module._load (node:internal/modules/cjs/loader:1038:27)
+parkmanager-web-1  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+parkmanager-web-1  |     at node:internal/main/run_main_module:28:49 {
+parkmanager-web-1  |   code: 'MODULE_NOT_FOUND',
+parkmanager-web-1  |   requireStack: []
+parkmanager-web-1  | }
+parkmanager-web-1  | Node.js v20.20.1
+parkmanager-web-1  | 

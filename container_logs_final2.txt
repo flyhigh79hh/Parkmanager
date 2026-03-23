@@ -1,0 +1,9 @@
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | ▲ Next.js 16.2.1
+parkmanager-web-1  | - Local:         http://b7dd61d528bb:3000
+parkmanager-web-1  | - Network:       http://b7dd61d528bb:3000
+parkmanager-web-1  | ✓ Ready in 0ms

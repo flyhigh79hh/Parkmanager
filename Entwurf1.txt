@@ -1,0 +1,12 @@
+Parking lot reservation system
+-web app
+-docker compose
+-multilanguage: german and english
+-admin page password protected
+-users have no passwords
+-3 types of users: normal, management, special-needs
+-configurable timeframes for bookings without restictions and bookings with fairness enforcement restrictions
+-configurable list of parking spaces in multiple parking lots
+-status page showing all bookings of all users for today and next business day, instructions on how to embed status in intranet web pages served by a different web server.
+-booking page where user can be selected and parking spaces be booked
+-fairness enforcement: only one spot per user per day, configurable amount of spots per week for normal users, for management, no limit for special needs users.

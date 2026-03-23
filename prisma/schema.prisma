@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String    @id @default(uuid())
+  name     String    @unique
+  role     String    // NORMAL, MANAGEMENT, SPECIAL_NEEDS
+  bookings Booking[]
+}
+
+model ParkingLot {
+  id     String         @id @default(uuid())
+  name   String
+  spaces ParkingSpace[]
+}
+
+model ParkingSpace {
+  id       String     @id @default(uuid())
+  name     String
+  lotId    String
+  lot      ParkingLot @relation(fields: [lotId], references: [id], onDelete: Cascade)
+  bookings Booking[]
+}
+
+model Booking {
+  id       String       @id @default(uuid())
+  date     String       // Format: YYYY-MM-DD
+  userId   String
+  spaceId  String
+  user     User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  space    ParkingSpace @relation(fields: [spaceId], references: [id], onDelete: Cascade)
+
+  @@unique([spaceId, date])
+  // Ensure we can efficiently query bookings per user per day
+  @@index([userId, date])
+}
+
+model Setting {
+  key   String @id
+  value String
+}

@@ -1,0 +1,107 @@
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | SQLite database dev.db created at file:/app/db/dev.db
+parkmanager-web-1  | 
+parkmanager-web-1  | 🚀  Your database is now in sync with your Prisma schema. Done in 94ms
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'
+parkmanager-web-1  | Prisma schema loaded from prisma/schema.prisma
+parkmanager-web-1  | Datasource "db": SQLite database "dev.db" at "file:/app/db/dev.db"
+parkmanager-web-1  | 
+parkmanager-web-1  | The database is already in sync with the Prisma schema.
+parkmanager-web-1  | 
+parkmanager-web-1  | Running generate... (Use --skip-generate to skip the generators)
+parkmanager-web-1  | Error: EPERM: operation not permitted, utime '/app/.cache/prisma/master/605197351a3c8bdd595af2d2a9bc3025bca48ea2/debian-openssl-3.0.x/libquery-engine'

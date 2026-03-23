@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+build
+.git
+.env
+*.db
+*.db-journal
+error.txt
+npm-debug.log
+doc
+README.md
+walkthrough.md
+task.md
+implementation_plan.md

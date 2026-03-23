@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  parkmanager-web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:/app/db/dev.db
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+    volumes:
+      - ./data:/app/db
+    restart: unless-stopped
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    # Attempting to fix MTU issues if present
+    networks:
+      default:
+        aliases:
+          - parkmanager
+    cap_add:
+      - NET_ADMIN
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
