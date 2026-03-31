@@ -10,7 +10,7 @@ services:
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=admin
     volumes:
-      - ./data:/app/db
+      - parkmanager_data:/app/db
     restart: unless-stopped
     dns:
       - 8.8.8.8
@@ -28,3 +28,6 @@ networks:
     driver: bridge
     driver_opts:
       com.docker.network.driver.mtu: 1400
+
+volumes:
+  parkmanager_data:
