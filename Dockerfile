@@ -56,9 +56,6 @@ RUN adduser --system --uid 1001 --gid 1001 --home /app nextjs
 # And give permissions to global prisma install so it can copy the engine at runtime
 RUN chown -R nextjs:nodejs /app/.cache /usr/local/lib/node_modules/prisma
 
-# Set correct permissions
-COPY --from=builder /app/public ./public
-
 # Set the correct permission for prerender cache
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
