@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
-import { createUser, deleteUser } from "./actions";
+import { createUser } from "./actions";
+import UserRow from "./UserRow";
 import Link from "next/link";
 import { getDictionary, Locale } from "@/lib/i18n";
 import { cookies } from "next/headers";
@@ -48,22 +49,7 @@ export default async function UsersAdminPage() {
           </thead>
           <tbody>
             {users.map(user => (
-              <tr key={user.id}>
-                <td>{user.name}</td>
-                <td>
-                  <span className={`badge ${user.role === 'MANAGEMENT' ? 'badge-purple' : user.role === 'SPECIAL_NEEDS' ? 'badge-blue' : 'badge-green'}`}>
-                    {user.role}
-                  </span>
-                </td>
-                <td>
-                  <form action={async () => {
-                    "use server";
-                    await deleteUser(user.id);
-                  }}>
-                    <button type="submit" className="btn btn-danger" style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem" }}>{dict.remove}</button>
-                  </form>
-                </td>
-              </tr>
+              <UserRow key={user.id} user={user} dict={dict} />
             ))}
             {users.length === 0 && (
               <tr>

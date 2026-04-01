@@ -26,3 +26,19 @@ export async function deleteUser(id: string) {
     // ignore or handle error
   }
 }
+
+export async function updateUserRole(id: string, newRole: string) {
+  try {
+    const validRoles = ['NORMAL', 'MANAGEMENT', 'SPECIAL_NEEDS'];
+    if (!validRoles.includes(newRole)) return { error: "Invalid role" };
+
+    await prisma.user.update({
+      where: { id },
+      data: { role: newRole }
+    });
+    revalidatePath("/admin/users");
+    return { success: true };
+  } catch (e) {
+    return { error: "Role update failed" };
+  }
+}
