@@ -1,17 +1,34 @@
 "use client";
 
-import { useState } from "react";
-import { bookSpace } from "./actions";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { bookSpace, cancelBooking } from "./actions";
 
 export default function BookingClient({ users, lots, bookingsInfo, dict }: any) {
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
   const [userId, setUserId] = useState("");
   const [date, setDate] = useState("");
   const [spaceId, setSpaceId] = useState("");
   const [message, setMessage] = useState({ type: "", text: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Derive user bookings from the server-provided bookingsInfo prop
+  const userBookings = bookingsInfo.filter((b: any) => b.userId === userId);
+
   const isSpaceBookedOnDate = (sId: string, dStr: string) => {
     return bookingsInfo.some((b: any) => b.spaceId === sId && b.date === dStr);
+  };
+
+  const handleCancel = async (bookingId: string) => {
+    startTransition(async () => {
+      const formData = new FormData();
+      formData.append("bookingId", bookingId);
+      await cancelBooking(formData);
+      router.refresh();
+      setMessage({ type: "success", text: dict.cancel + " success!" }); // Quick feedback
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,13 +48,15 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
     } else if (res?.success) {
       setMessage({ type: "success", text: dict.success });
       setSpaceId("");
-      
-      // Update local state directly so we don't have to wait for server revalidation to see it immediately
-      bookingsInfo.push({ spaceId, date });
+      startTransition(() => {
+        router.refresh();
+      });
     }
     
     setIsSubmitting(false);
   };
+
+  const isGlobalPending = isSubmitting || isPending;
 
   const todayStr = new Date().toISOString().split('T')[0];
 
@@ -107,10 +126,47 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
           </div>
         )}
 
-        <button type="submit" className="btn btn-primary" disabled={!userId || !date || !spaceId || isSubmitting} style={{ padding: "1rem", fontSize: "1.125rem", marginTop: "1rem" }}>
-          {isSubmitting ? "..." : dict.submit}
+        <button type="submit" className="btn btn-primary" disabled={!userId || !date || !spaceId || isGlobalPending} style={{ padding: "1rem", fontSize: "1.125rem", marginTop: "1rem" }}>
+          {isGlobalPending ? "..." : dict.submit}
         </button>
       </form>
+
+      {userId && (
+        <div style={{ marginTop: "3rem", borderTop: "1px solid #e2e8f0", paddingTop: "2rem" }}>
+          <h3 style={{ marginBottom: "1rem", color: "var(--text-primary)" }}>{dict.yourBookings}</h3>
+          {userBookings.length > 0 ? (
+            <div style={{ display: "grid", gap: "1rem" }}>
+              {userBookings.map((b: any) => {
+                const parts = b.date.split('-'); // YYYY-MM-DD
+                const formattedDate = `${parts[2]}.${parts[1]}.${parts[0]}`;
+                return (
+                  <div key={b.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1rem", background: "#f8fafc", borderRadius: "8px", border: "1px solid #cbd5e0" }}>
+                    <div>
+                      <div style={{ fontWeight: 600, color: "var(--text-primary)", marginBottom: "0.25rem" }}>
+                        {formattedDate} - {b.space.lot.name}
+                      </div>
+                      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                        <span className="badge badge-blue">{dict.spot}: {b.space.name}</span>
+                      </div>
+                    </div>
+                    <button 
+                      type="button" 
+                      onClick={() => handleCancel(b.id)} 
+                      disabled={isGlobalPending}
+                      className="btn btn-danger" 
+                      style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}
+                    >
+                      {dict.cancel}
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <p style={{ color: "var(--text-secondary)", fontStyle: "italic" }}>{dict.noBookingsUser}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

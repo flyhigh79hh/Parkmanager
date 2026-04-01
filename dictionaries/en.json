@@ -15,7 +15,12 @@
     "selectLot": "Select Parking Lot",
     "submit": "Book Now",
     "success": "Booking confirmed!",
-    "errorFairness": "Booking rejected: Fairness limit exceeded"
+    "errorFairness": "Booking rejected: Fairness limit exceeded",
+    "yourBookings": "Your Bookings",
+    "cancel": "Cancel",
+    "noBookingsUser": "No bookings found for this user.",
+    "date": "Date",
+    "spot": "Spot"
   },
   "admin": {
     "title": "Administration",

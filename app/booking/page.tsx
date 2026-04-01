@@ -19,7 +19,18 @@ export default async function BookingPage() {
 
   const bookingsInfo = await prisma.booking.findMany({
     where: { date: { gte: todayStr, lte: next30Str } },
-    select: { spaceId: true, date: true }
+    select: {
+      id: true,
+      userId: true,
+      spaceId: true,
+      date: true,
+      space: {
+        include: {
+          lot: true
+        }
+      }
+    },
+    orderBy: { date: 'asc' }
   });
 
   return (

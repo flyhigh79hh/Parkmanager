@@ -15,7 +15,12 @@
     "selectLot": "Parkplatz auswählen",
     "submit": "Jetzt Buchen",
     "success": "Buchung bestätigt!",
-    "errorFairness": "Buchung abgelehnt: Fairness-Limit überschritten"
+    "errorFairness": "Buchung abgelehnt: Fairness-Limit überschritten",
+    "yourBookings": "Ihre Buchungen",
+    "cancel": "Stornieren",
+    "noBookingsUser": "Keine Buchungen für diesen Benutzer gefunden.",
+    "date": "Datum",
+    "spot": "Platz"
   },
   "admin": {
     "title": "Verwaltung",
