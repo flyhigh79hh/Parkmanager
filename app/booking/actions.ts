@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
 
 export async function bookSpace(data: FormData) {
   const userId = data.get("userId") as string;
@@ -66,6 +67,18 @@ export async function bookSpace(data: FormData) {
       data: { userId, spaceId, date: dateStr }
     });
 
+    const headersList = await headers();
+    const ip = headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "Unknown IP";
+
+    await prisma.actionLog.create({
+      data: {
+        action: "BOOK",
+        ipAddress: ip,
+        userId: userId,
+        details: JSON.stringify({ spaceId, date: dateStr })
+      }
+    });
+
     revalidatePath("/status");
     revalidatePath("/booking");
 
@@ -81,7 +94,23 @@ export async function cancelBooking(data: FormData) {
   if (!bookingId) return;
 
   try {
+    const booking = await prisma.booking.findUnique({ where: { id: bookingId } });
+    if (!booking) return;
+
     await prisma.booking.delete({ where: { id: bookingId } });
+
+    const headersList = await headers();
+    const ip = headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "Unknown IP";
+
+    await prisma.actionLog.create({
+      data: {
+        action: "CANCEL",
+        ipAddress: ip,
+        userId: booking.userId,
+        details: JSON.stringify({ spaceId: booking.spaceId, date: booking.date })
+      }
+    });
+
     revalidatePath("/status");
     revalidatePath("/booking");
   } catch (e: any) {

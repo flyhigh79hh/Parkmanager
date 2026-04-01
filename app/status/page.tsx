@@ -68,9 +68,9 @@ export default async function StatusPage() {
           <table className="data-table">
             <thead>
               <tr>
-                <th>User</th>
-                <th>Lot</th>
-                <th>Space</th>
+                <th>{dict.user}</th>
+                <th>{dict.lot}</th>
+                <th>{dict.space}</th>
               </tr>
             </thead>
             <tbody>
@@ -90,7 +90,7 @@ export default async function StatusPage() {
                 </tr>
               ))}
               {todayBookings.length === 0 && (
-                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>No bookings.</td></tr>
+                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>{dict.noBookings}</td></tr>
               )}
             </tbody>
           </table>
@@ -101,9 +101,9 @@ export default async function StatusPage() {
            <table className="data-table">
             <thead>
               <tr>
-                <th>User</th>
-                <th>Lot</th>
-                <th>Space</th>
+                <th>{dict.user}</th>
+                <th>{dict.lot}</th>
+                <th>{dict.space}</th>
               </tr>
             </thead>
             <tbody>
@@ -123,7 +123,7 @@ export default async function StatusPage() {
                 </tr>
               ))}
               {nextDayBookings.length === 0 && (
-                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>No bookings.</td></tr>
+                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>{dict.noBookings}</td></tr>
               )}
             </tbody>
           </table>
@@ -134,9 +134,9 @@ export default async function StatusPage() {
            <table className="data-table">
             <thead>
               <tr>
-                <th>User</th>
-                <th>Lot</th>
-                <th>Space</th>
+                <th>{dict.user}</th>
+                <th>{dict.lot}</th>
+                <th>{dict.space}</th>
               </tr>
             </thead>
             <tbody>
@@ -156,7 +156,7 @@ export default async function StatusPage() {
                 </tr>
               ))}
               {thirdDayBookings.length === 0 && (
-                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>No bookings.</td></tr>
+                <tr><td colSpan={3} style={{ textAlign: "center", color: "var(--text-secondary)" }}>{dict.noBookings}</td></tr>
               )}
             </tbody>
           </table>

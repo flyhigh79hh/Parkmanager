@@ -14,8 +14,9 @@ datasource db {
 model User {
   id       String    @id @default(uuid())
   name     String    @unique
-  role     String    // NORMAL, MANAGEMENT, SPECIAL_NEEDS
-  bookings Booking[]
+  role       String    // NORMAL, MANAGEMENT, SPECIAL_NEEDS
+  bookings   Booking[]
+  actionLogs ActionLog[]
 }
 
 model ParkingLot {
@@ -48,4 +49,14 @@ model Booking {
 model Setting {
   key   String @id
   value String
+}
+
+model ActionLog {
+  id        String   @id @default(uuid())
+  timestamp DateTime @default(now())
+  ipAddress String
+  action    String   // "BOOK" or "CANCEL"
+  details   String?  // Optional details like spaceId or date
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
