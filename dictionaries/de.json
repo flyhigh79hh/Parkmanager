@@ -58,7 +58,9 @@
     "user": "Benutzer",
     "lot": "Parkplatz",
     "space": "Stellplatz",
-    "noBookings": "Keine Buchungen."
+    "noBookings": "Keine Buchungen.",
+    "showAll": "Alle zukünftigen Buchungen anzeigen",
+    "showLess": "Weniger anzeigen"
   },
   "adminUsers": {
     "title": "Benutzer verwalten",
@@ -92,12 +94,20 @@
   "adminSettings": {
     "title": "Globale Einstellungen & Fairness-Regeln",
     "back": "Zurück zur Verwaltung",
+    "fairnessSection": "Fairness-Regeln",
     "normalLimit": "Wöchentliches Buchungslimit für normale Benutzer",
     "normalDesc": "Maximale Anzahl an Buchungen, die ein normaler Benutzer pro Woche vornehmen kann.",
     "mgmtLimit": "Wöchentliches Buchungslimit für das Management",
     "mgmtDesc": "Maximale Anzahl an Buchungen, die ein Management-Benutzer pro Woche vornehmen kann.",
     "restriction": "Zeitrahmen für Aufhebung der Einschränkungen (Stunden)",
     "restrictionDesc": "Stunden vor einem Buchungstag, wenn alle Fairness-Einschränkungen aufgehoben werden.",
+    "horizonSection": "Vorausbuchungs-Horizont",
+    "normalHorizon": "Vorausbuchungs-Horizont: Gruppe 1 (Tage)",
+    "normalHorizonDesc": "Wie viele Tage im Voraus können Benutzer der Gruppe 1 buchen.",
+    "mgmtHorizon": "Vorausbuchungs-Horizont: Gruppe 2 (Tage)",
+    "mgmtHorizonDesc": "Wie viele Tage im Voraus können Benutzer der Gruppe 2 buchen.",
+    "specialHorizon": "Vorausbuchungs-Horizont: Gruppe 3 (Tage)",
+    "specialHorizonDesc": "Wie viele Tage im Voraus können Benutzer der Gruppe 3 buchen.",
     "howItWorks": "Wie Fairness funktioniert",
     "howItWorksText1": "Standardmäßig können Benutzer nur 1 Platz pro Tag bis zu ihrem Wochenlimit buchen. Besondere Bedürfnisse Benutzer haben kein Wochenlimit. Bei Buchungen, die weniger als ",
     "howItWorksText2": " Stunden vor Beginn des Buchungstages erfolgen, wird die Wochenlimit-Regel vollständig ignoriert!",

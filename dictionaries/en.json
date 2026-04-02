@@ -58,7 +58,9 @@
     "user": "User",
     "lot": "Lot",
     "space": "Space",
-    "noBookings": "No bookings."
+    "noBookings": "No bookings.",
+    "showAll": "Show All Future Bookings",
+    "showLess": "Show Less"
   },
   "adminUsers": {
     "title": "Manage Users",
@@ -94,12 +96,20 @@
   "adminSettings": {
     "title": "Global Settings & Fairness Rules",
     "back": "Back to Dashboard",
+    "fairnessSection": "Fairness Rules",
     "normalLimit": "Normal User Weekly Booking Limit",
     "normalDesc": "Maximum number of bookings a normal user can make per week.",
     "mgmtLimit": "Management Weekly Booking Limit",
     "mgmtDesc": "Maximum number of bookings a management user can make per week.",
     "restriction": "Restriction Removal Timeframe (Hours)",
     "restrictionDesc": "Hours before a booking day when all fairness restrictions are lifted, allowing any user to book remaining spots.",
+    "horizonSection": "Advance Booking Horizon",
+    "normalHorizon": "Advance Booking Horizon: Group 1 (Days)",
+    "normalHorizonDesc": "How many days ahead Group 1 users can book.",
+    "mgmtHorizon": "Advance Booking Horizon: Group 2 (Days)",
+    "mgmtHorizonDesc": "How many days ahead Group 2 users can book.",
+    "specialHorizon": "Advance Booking Horizon: Group 3 (Days)",
+    "specialHorizonDesc": "How many days ahead Group 3 users can book.",
     "howItWorks": "How Fairness Works",
     "howItWorksText1": "By default, users can book only 1 spot per day, and up to their weekly limit. Special needs users have no weekly limits. If the booking is made less than ",
     "howItWorksText2": " hours before the start of the booking day (midnight), the weekly limit rule is completely ignored!",

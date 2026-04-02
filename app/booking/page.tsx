@@ -11,14 +11,26 @@ export default async function BookingPage() {
   const users = await prisma.user.findMany({ orderBy: { name: 'asc' } });
   const lots = await prisma.parkingLot.findMany({ include: { spaces: true }, orderBy: { name: 'asc' } });
 
+  // Fetch the maximum booking horizon across all roles so we load enough bookings
+  const settings = await prisma.setting.findMany();
+  const getVal = (key: string, def: string) => settings.find(s => s.key === key)?.value || def;
+
+  const horizons = {
+    NORMAL: parseInt(getVal("BOOKING_HORIZON_DAYS_NORMAL", "14")),
+    MANAGEMENT: parseInt(getVal("BOOKING_HORIZON_DAYS_MANAGEMENT", "30")),
+    SPECIAL_NEEDS: parseInt(getVal("BOOKING_HORIZON_DAYS_SPECIAL", "60")),
+  };
+
+  const maxHorizon = Math.max(horizons.NORMAL, horizons.MANAGEMENT, horizons.SPECIAL_NEEDS);
+
   const today = new Date();
   const todayStr = today.toISOString().split('T')[0];
-  const next30 = new Date(today);
-  next30.setDate(today.getDate() + 30);
-  const next30Str = next30.toISOString().split('T')[0];
+  const maxDate = new Date(today);
+  maxDate.setDate(today.getDate() + maxHorizon);
+  const maxDateStr = maxDate.toISOString().split('T')[0];
 
   const bookingsInfo = await prisma.booking.findMany({
-    where: { date: { gte: todayStr, lte: next30Str } },
+    where: { date: { gte: todayStr, lte: maxDateStr } },
     select: {
       id: true,
       userId: true,
@@ -36,7 +48,7 @@ export default async function BookingPage() {
   return (
     <div className="animate-fade-in" style={{ maxWidth: "800px", margin: "0 auto", paddingBottom: "3rem" }}>
       <h2 style={{ marginBottom: "2rem", textAlign: "center" }}>{dict.title}</h2>
-      <BookingClient users={users} lots={lots} bookingsInfo={bookingsInfo} dict={dict} />
+      <BookingClient users={users} lots={lots} bookingsInfo={bookingsInfo} dict={dict} horizons={horizons} />
     </div>
   );
 }

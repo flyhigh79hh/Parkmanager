@@ -4,7 +4,19 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { bookSpace, cancelBooking } from "./actions";
 
-export default function BookingClient({ users, lots, bookingsInfo, dict }: any) {
+interface Horizons {
+  NORMAL: number;
+  MANAGEMENT: number;
+  SPECIAL_NEEDS: number;
+}
+
+export default function BookingClient({ users, lots, bookingsInfo, dict, horizons }: {
+  users: any[];
+  lots: any[];
+  bookingsInfo: any[];
+  dict: any;
+  horizons: Horizons;
+}) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -19,6 +31,23 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
 
   const isSpaceBookedOnDate = (sId: string, dStr: string) => {
     return bookingsInfo.some((b: any) => b.spaceId === sId && b.date === dStr);
+  };
+
+  // Compute max selectable date based on selected user's role
+  const selectedUser = users.find((u: any) => u.id === userId);
+  const getMaxDate = () => {
+    if (!selectedUser) {
+      // Fall back to smallest horizon if no user selected
+      const minHorizon = Math.min(horizons.NORMAL, horizons.MANAGEMENT, horizons.SPECIAL_NEEDS);
+      const d = new Date();
+      d.setDate(d.getDate() + minHorizon);
+      return d.toISOString().split('T')[0];
+    }
+    const role = selectedUser.role as keyof Horizons;
+    const days = horizons[role] ?? horizons.NORMAL;
+    const d = new Date();
+    d.setDate(d.getDate() + days);
+    return d.toISOString().split('T')[0];
   };
 
   const handleCancel = async (bookingId: string) => {
@@ -59,6 +88,7 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
   const isGlobalPending = isSubmitting || isPending;
 
   const todayStr = new Date().toISOString().split('T')[0];
+  const maxDateStr = getMaxDate();
 
   return (
     <div className="surface">
@@ -72,7 +102,7 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
         
         <div className="input-group" style={{ marginBottom: 0 }}>
           <label className="input-label">{dict.selectUser}</label>
-          <select className="input-field" value={userId} onChange={e => {setUserId(e.target.value); setMessage({ type: "", text: "" });}} required>
+          <select className="input-field" value={userId} onChange={e => {setUserId(e.target.value); setDate(""); setSpaceId(""); setMessage({ type: "", text: "" });}} required>
             <option value="" disabled>-- {dict.selectUser} --</option>
             {users.map((u: any) => (
               <option key={u.id} value={u.id}>{u.name}</option>
@@ -82,7 +112,16 @@ export default function BookingClient({ users, lots, bookingsInfo, dict }: any) 
 
         <div className="input-group" style={{ marginBottom: 0 }}>
           <label className="input-label">{dict.selectDate}</label>
-          <input type="date" className="input-field" min={todayStr} value={date} onChange={e => {setDate(e.target.value); setSpaceId(""); setMessage({ type: "", text: "" });}} required />
+          <input
+            type="date"
+            className="input-field"
+            min={todayStr}
+            max={maxDateStr}
+            value={date}
+            onChange={e => {setDate(e.target.value); setSpaceId(""); setMessage({ type: "", text: "" });}}
+            required
+            disabled={!userId}
+          />
         </div>
 
         {date && (

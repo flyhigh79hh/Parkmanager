@@ -15,6 +15,27 @@ export async function bookSpace(data: FormData) {
     const user = await prisma.user.findUnique({ where: { id: userId } });
     if (!user) return { error: "User not found" };
 
+    const settings = await prisma.setting.findMany();
+    const getVal = (key: string, def: string) => settings.find(s => s.key === key)?.value || def;
+
+    // --- Booking horizon check ---
+    const horizonKey = user.role === "MANAGEMENT"
+      ? "BOOKING_HORIZON_DAYS_MANAGEMENT"
+      : user.role === "SPECIAL_NEEDS"
+      ? "BOOKING_HORIZON_DAYS_SPECIAL"
+      : "BOOKING_HORIZON_DAYS_NORMAL";
+    const horizonDays = parseInt(getVal(horizonKey, user.role === "MANAGEMENT" ? "30" : user.role === "SPECIAL_NEEDS" ? "60" : "14"));
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + horizonDays);
+    const targetDate = new Date(`${dateStr}T00:00:00`);
+
+    if (targetDate > maxDate) {
+      return { error: "Booking too far in the future. Please select a date within the allowed range." };
+    }
+
     // 1. One spot per user per day check
     const existingDayBooking = await prisma.booking.findFirst({
       where: { userId, date: dateStr }
@@ -27,12 +48,8 @@ export async function bookSpace(data: FormData) {
     if (spaceAlreadyBooked) return { error: "This space is already booked on this date" };
 
     if (user.role !== "SPECIAL_NEEDS") {
-      const settings = await prisma.setting.findMany();
-      const getVal = (key: string, def: string) => settings.find(s => s.key === key)?.value || def;
-
       const restrictionHours = parseInt(getVal("RESTRICTION_TIMEFRAME_HOURS", "24"));
       
-      const targetDate = new Date(`${dateStr}T00:00:00`);
       const now = new Date();
       const diffMs = targetDate.getTime() - now.getTime();
       const diffHours = diffMs / (1000 * 60 * 60);
