@@ -210,7 +210,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {allBookings.length} {dict.totalBookings} ({daysAllTime} {dict.daysCount ? dict.daysCount.replace("{count}", String(daysAllTime)) : `${daysAllTime} Tage`})
+            {allBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysAllTime)) : `${daysAllTime} Tage`})
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {monthlyBookings.length} {dict.totalBookings} ({daysThisMonth} {dict.daysCount ? dict.daysCount.replace("{count}", String(daysThisMonth)) : `${daysThisMonth} Tage`})
+            {monthlyBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysThisMonth)) : `${daysThisMonth} Tage`})
           </p>
         </div>
 
@@ -238,7 +238,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {weeklyBookings.length} {dict.totalBookings} (7 {dict.daysCount ? dict.daysCount.replace("{count}", "7") : "Tage"})
+            {weeklyBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", "7") : "7 Tage"})
           </p>
         </div>
 
