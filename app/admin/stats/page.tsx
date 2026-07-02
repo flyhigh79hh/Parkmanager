@@ -57,43 +57,76 @@ export default async function StatsPage() {
 
   const totalSpaces = spaces.length;
 
-  // Occupancy rate calculations
-  const getDaysBetween = (startStr: string, endStr: string) => {
-    const start = new Date(startStr);
-    const end = new Date(endStr);
-    const diffTime = Math.abs(end.getTime() - start.getTime());
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+  // Helper to count weekdays (Monday-Friday) between two dates inclusive
+  const getWeekdaysBetween = (startStr: string, endStr: string) => {
+    const start = new Date(`${startStr}T00:00:00`);
+    const end = new Date(`${endStr}T00:00:00`);
+    let count = 0;
+    const current = new Date(start);
+    while (current <= end) {
+      const dayOfWeek = current.getDay();
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+        count++;
+      }
+      current.setDate(current.getDate() + 1);
+    }
+    return count;
   };
+
+  // Helper to count weekdays in a given month
+  const getWeekdaysInMonth = (year: number, month: number) => {
+    const lastDay = new Date(year, month + 1, 0).getDate();
+    let count = 0;
+    for (let d = 1; d <= lastDay; d++) {
+      const date = new Date(year, month, d);
+      const dayOfWeek = date.getDay();
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+        count++;
+      }
+    }
+    return count;
+  };
+
+  const isWeekdayStr = (dateStr: string) => {
+    const d = new Date(`${dateStr}T00:00:00`);
+    const day = d.getDay();
+    return day !== 0 && day !== 6;
+  };
+
+  // Filter bookings to weekdays only for statistics calculations
+  const weekdayBookings = allBookings.filter(b => isWeekdayStr(b.date));
+  const monthlyWeekdayBookings = monthlyBookings.filter(b => isWeekdayStr(b.date));
+  const weeklyWeekdayBookings = weeklyBookings.filter(b => isWeekdayStr(b.date));
 
   let firstBookingDate = "";
   let lastBookingDate = "";
-  if (allBookings.length > 0) {
-    const sortedDates = allBookings.map(b => b.date).sort();
+  if (weekdayBookings.length > 0) {
+    const sortedDates = weekdayBookings.map(b => b.date).sort();
     firstBookingDate = sortedDates[0];
     lastBookingDate = sortedDates[sortedDates.length - 1];
   }
 
   const todayStr = now.toISOString().split('T')[0];
   const endRangeStr = lastBookingDate && lastBookingDate > todayStr ? lastBookingDate : todayStr;
-  const daysAllTime = firstBookingDate ? getDaysBetween(firstBookingDate, endRangeStr) : 0;
-  const daysThisWeek = 7;
-  const daysThisMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+  const daysAllTime = firstBookingDate ? getWeekdaysBetween(firstBookingDate, endRangeStr) : 0;
+  const daysThisWeek = 5; // Mon - Fri
+  const daysThisMonth = getWeekdaysInMonth(now.getFullYear(), now.getMonth());
 
   const overallOccupancy = totalSpaces > 0 && daysAllTime > 0
-    ? Math.round((allBookings.length / (totalSpaces * daysAllTime)) * 100)
+    ? Math.round((weekdayBookings.length / (totalSpaces * daysAllTime)) * 100)
     : 0;
 
-  const monthOccupancy = totalSpaces > 0
-    ? Math.round((monthlyBookings.length / (totalSpaces * daysThisMonth)) * 100)
+  const monthOccupancy = totalSpaces > 0 && daysThisMonth > 0
+    ? Math.round((monthlyWeekdayBookings.length / (totalSpaces * daysThisMonth)) * 100)
     : 0;
 
-  const weekOccupancy = totalSpaces > 0
-    ? Math.round((weeklyBookings.length / (totalSpaces * daysThisWeek)) * 100)
+  const weekOccupancy = totalSpaces > 0 && daysThisWeek > 0
+    ? Math.round((weeklyWeekdayBookings.length / (totalSpaces * daysThisWeek)) * 100)
     : 0;
 
-  // Fully Booked Days calculation
+  // Fully Booked Days calculation (Only check weekdays)
   const bookingsCountPerDate: Record<string, number> = {};
-  for (const b of allBookings) {
+  for (const b of weekdayBookings) {
     bookingsCountPerDate[b.date] = (bookingsCountPerDate[b.date] || 0) + 1;
   }
 
@@ -107,11 +140,11 @@ export default async function StatsPage() {
   }
   fullyOccupiedDates.sort();
 
-  // Frequencies per Parking Space (Stellplatz)
+  // Frequencies per Parking Space (Stellplatz) - Weekday bookings
   const spaceStats = spaces.map(s => {
-    const totalCount = allBookings.filter(b => b.spaceId === s.id).length;
-    const monthCount = monthlyBookings.filter(b => b.spaceId === s.id).length;
-    const weekCount = weeklyBookings.filter(b => b.spaceId === s.id).length;
+    const totalCount = weekdayBookings.filter(b => b.spaceId === s.id).length;
+    const monthCount = monthlyWeekdayBookings.filter(b => b.spaceId === s.id).length;
+    const weekCount = weeklyWeekdayBookings.filter(b => b.spaceId === s.id).length;
     return {
       id: s.id,
       name: s.name,
@@ -122,11 +155,11 @@ export default async function StatsPage() {
     };
   }).sort((a, b) => b.totalCount - a.totalCount);
 
-  // Frequencies per Parking Lot (Parkplatz)
+  // Frequencies per Parking Lot (Parkplatz) - Weekday bookings
   const lotStats = lots.map(l => {
-    const totalCount = allBookings.filter(b => b.space?.lotId === l.id).length;
-    const monthCount = monthlyBookings.filter(b => b.space?.lotId === l.id).length;
-    const weekCount = weeklyBookings.filter(b => b.space?.lotId === l.id).length;
+    const totalCount = weekdayBookings.filter(b => b.space?.lotId === l.id).length;
+    const monthCount = monthlyWeekdayBookings.filter(b => b.space?.lotId === l.id).length;
+    const weekCount = weeklyWeekdayBookings.filter(b => b.space?.lotId === l.id).length;
     return {
       id: l.id,
       name: l.name,
@@ -210,7 +243,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {allBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysAllTime)) : `${daysAllTime} Tage`})
+            {weekdayBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysAllTime)) : `${daysAllTime} Tage`})
           </p>
         </div>
 
@@ -224,7 +257,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {monthlyBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysThisMonth)) : `${daysThisMonth} Tage`})
+            {monthlyWeekdayBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", String(daysThisMonth)) : `${daysThisMonth} Tage`})
           </p>
         </div>
 
@@ -238,7 +271,7 @@ export default async function StatsPage() {
             </div>
           </div>
           <p style={{ margin: 0, fontSize: "0.75rem", opacity: 0.7 }}>
-            {weeklyBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", "7") : "7 Tage"})
+            {weeklyWeekdayBookings.length} {dict.totalBookings} ({dict.daysCount ? dict.daysCount.replace("{count}", "5") : "5 Tage"})
           </p>
         </div>
 
